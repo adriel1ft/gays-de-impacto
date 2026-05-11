@@ -1,6 +1,10 @@
-# EquiDar
+<p align="center">
+  <img src="equidar-front/src/assets/logo.png" alt="Equidar Logo" width="480" height="320" />
+</p>
 
-EquiDar é uma plataforma de apoio à decisão para educação pública, criada para ajudar gestores a identificar escolas e municípios com maior carência de infraestrutura e desempenho educacional.
+# Equidar
+
+Equidar é uma plataforma de apoio à decisão para educação pública, criada para ajudar gestores a identificar escolas e municípios com maior carência de infraestrutura e desempenho educacional.
 
 O projeto combina dados de IDEB e infraestrutura escolar para transformar indicadores em sinais de prioridade mais transparentes e acionáveis.
 
