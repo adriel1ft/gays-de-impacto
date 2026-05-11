@@ -1,10 +1,14 @@
 import { ApiService } from './api';
+import { MOCK_CARE_RANKING, MOCK_MUNICIPALITY_RANKINGS } from './mocks';
 
 export class EquidarService extends ApiService {
+  private useMocks: boolean;
+
   constructor() {
     // Obtém a URL base das variáveis de ambiente
     const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
     super(baseURL);
+    this.useMocks = import.meta.env.VITE_USE_MOCKS === 'true';
   }
 
   async getMunicipalities(){
@@ -40,6 +44,9 @@ export class EquidarService extends ApiService {
   }
 
   async getCareRankingByParameters(params: { municipalityId?: number; regionType?: string; isUrban?: boolean }){
+    if (this.useMocks) {
+      return Promise.resolve(MOCK_CARE_RANKING);
+    }
     const query = new URLSearchParams();
     if (params.municipalityId) query.append('municipalityId', params.municipalityId.toString());
     if (params.regionType) query.append('regionType', params.regionType);
@@ -56,8 +63,12 @@ export class EquidarService extends ApiService {
   }
   
   async getMunicipalityRankings() {
+    if (this.useMocks) {
+      return Promise.resolve(MOCK_MUNICIPALITY_RANKINGS);
+    }
     return this.get<Array<{
       municipality_id: string,
+      municipality_name: string,
       score: number,
       breakdown: {
         internet: number,
