@@ -8,6 +8,11 @@ Equidar é uma plataforma de apoio à decisão para educação pública, criada 
 
 O projeto combina dados de IDEB e infraestrutura escolar para transformar indicadores em sinais de prioridade mais transparentes e acionáveis.
 
+## Apresentação e demo
+
+- Apresentação (PDF): [docs/equidar.pdf](docs/equidar.pdf)
+- Demo no YouTube: https://youtu.be/zrbY-k_CM3Q?si=-6vLZyJclturYz4V
+
 ## Objetivo
 
 - Tornar a priorização de investimentos educacionais mais justa e orientada por dados.
